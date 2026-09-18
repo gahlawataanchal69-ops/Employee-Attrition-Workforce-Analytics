@@ -1,0 +1,25 @@
+age_cohort,education_field,total_employees,leavers_count,attrition_rate_pct,avg_monthly_income
+1. Under 30 (Gen Z / Young),Human Resources,4,3,75.0,2235.0
+1. Under 30 (Gen Z / Young),Technical Degree,38,20,52.63,3369.45
+1. Under 30 (Gen Z / Young),Marketing,26,12,46.15,4550.04
+1. Under 30 (Gen Z / Young),Life Sciences,121,28,23.14,3796.23
+1. Under 30 (Gen Z / Young),Medical,115,24,20.87,3478.49
+1. Under 30 (Gen Z / Young),Other,22,4,18.18,4047.95
+2. 30-39 (Early/Mid Career),Human Resources,15,4,26.67,4230.73
+2. 30-39 (Early/Mid Career),Other,36,6,16.67,4987.44
+2. 30-39 (Early/Mid Career),Marketing,67,11,16.42,6315.66
+2. 30-39 (Early/Mid Career),Medical,184,27,14.67,5659.74
+2. 30-39 (Early/Mid Career),Life Sciences,269,35,13.01,5578.08
+2. 30-39 (Early/Mid Career),Technical Degree,51,6,11.76,5385.86
+3. 40-49 (Experienced),Marketing,44,8,18.18,9085.64
+3. 40-49 (Experienced),Life Sciences,148,17,11.49,8399.09
+3. 40-49 (Experienced),Technical Degree,27,2,7.41,7961.59
+3. 40-49 (Experienced),Medical,104,7,6.73,8193.82
+3. 40-49 (Experienced),Other,21,0,0.0,9642.48
+3. 40-49 (Experienced),Human Resources,5,0,0.0,13460.4
+4. 50+ (Senior / Veteran),Other,3,1,33.33,8924.0
+4. 50+ (Senior / Veteran),Technical Degree,16,4,25.0,8900.94
+4. 50+ (Senior / Veteran),Marketing,22,4,18.18,10327.59
+4. 50+ (Senior / Veteran),Life Sciences,68,9,13.24,10497.63
+4. 50+ (Senior / Veteran),Medical,61,5,8.2,11919.38
+4. 50+ (Senior / Veteran),Human Resources,3,0,0.0,18602.67

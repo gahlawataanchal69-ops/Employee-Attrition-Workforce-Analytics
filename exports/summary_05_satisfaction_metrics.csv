@@ -1,0 +1,13 @@
+metric_category,rating_score,rating_label,total_headcount,leavers,attrition_rate_pct
+Environment Satisfaction,1,Low,284,72,25.35
+Environment Satisfaction,2,Medium,287,43,14.98
+Environment Satisfaction,3,High,453,62,13.69
+Environment Satisfaction,4,Very High,446,60,13.45
+Job Satisfaction,1,Low,289,66,22.84
+Job Satisfaction,2,Medium,280,46,16.43
+Job Satisfaction,3,High,442,73,16.52
+Job Satisfaction,4,Very High,459,52,11.33
+Work-Life Balance,1,Bad,80,25,31.25
+Work-Life Balance,2,Good,344,58,16.86
+Work-Life Balance,3,Better,893,127,14.22
+Work-Life Balance,4,Best,153,27,17.65

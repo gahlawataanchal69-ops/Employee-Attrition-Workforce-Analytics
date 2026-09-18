@@ -1,0 +1,11 @@
+tenure_band,overtime,employee_count,leavers_count,attrition_rate_pct,avg_monthly_income
+1. < 1 Year,Yes,14,10,71.43,4437.93
+1. < 1 Year,No,30,6,20.0,3962.1
+2. 1-2 Years,Yes,90,43,47.78,5072.17
+2. 1-2 Years,No,208,43,20.67,4678.38
+3. 3-5 Years,Yes,127,36,28.35,5699.44
+3. 3-5 Years,No,307,24,7.82,5226.5
+4. 6-10 Years,Yes,120,31,25.83,6419.09
+4. 6-10 Years,No,328,24,7.32,6621.62
+5. 10+ Years,Yes,65,7,10.77,10945.38
+5. 10+ Years,No,181,13,7.18,10865.86

@@ -1,0 +1,11 @@
+job_role,overtime,income_tier,tenure_tier,segment_headcount,segment_leavers,attrition_rate_pct
+Sales Representative,Yes,Low Income (<$3.5k),Early Career (<=2 yrs),10,8,80.0
+Laboratory Technician,Yes,Low Income (<$3.5k),Early Career (<=2 yrs),21,15,71.43
+Research Scientist,Yes,Low Income (<$3.5k),Early Career (<=2 yrs),24,13,54.17
+Sales Executive,Yes,Mid Income ($3.5k-$7k),Early Career (<=2 yrs),10,5,50.0
+Research Scientist,Yes,Low Income (<$3.5k),Tenured (6+ yrs),17,8,47.06
+Research Scientist,Yes,Low Income (<$3.5k),Mid Tenure (3-5 yrs),23,9,39.13
+Sales Representative,No,Low Income (<$3.5k),Early Career (<=2 yrs),37,13,35.14
+Sales Executive,Yes,Mid Income ($3.5k-$7k),Tenured (6+ yrs),28,9,32.14
+Laboratory Technician,No,Low Income (<$3.5k),Early Career (<=2 yrs),48,14,29.17
+Sales Executive,Yes,High Income (>$7k),Mid Tenure (3-5 yrs),11,3,27.27

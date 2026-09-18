@@ -1,0 +1,13 @@
+distance_band,business_travel,total_employees,leavers,attrition_rate_pct
+1. Near (1-5 mi),Travel_Frequently,125,28,22.4
+1. Near (1-5 mi),Travel_Rarely,444,57,12.84
+1. Near (1-5 mi),Non-Travel,63,2,3.17
+2. Moderate (6-15 mi),Travel_Frequently,86,21,24.42
+2. Moderate (6-15 mi),Travel_Rarely,375,57,15.2
+2. Moderate (6-15 mi),Non-Travel,48,4,8.33
+3. Far (16-25 mi),Travel_Frequently,47,13,27.66
+3. Far (16-25 mi),Travel_Rarely,167,38,22.75
+3. Far (16-25 mi),Non-Travel,28,4,14.29
+4. Very Far (26+ mi),Travel_Frequently,19,7,36.84
+4. Very Far (26+ mi),Non-Travel,11,2,18.18
+4. Very Far (26+ mi),Travel_Rarely,57,4,7.02

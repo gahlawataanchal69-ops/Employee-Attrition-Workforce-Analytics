@@ -1,0 +1,21 @@
+job_role,job_level,total_employees,leavers,avg_income_retained,avg_income_leavers,income_gap_retained_vs_leavers,pct_income_deficit_leavers
+Sales Representative,2,7,1,4226.83,2086.0,2140.83,50.65
+Human Resources,1,33,10,2871.26,2415.7,455.56,15.87
+Laboratory Technician,3,3,1,6306.5,5381.0,925.5,14.68
+Manufacturing Director,2,90,5,5644.87,5066.8,578.07,10.24
+Sales Representative,1,76,32,2603.66,2373.44,230.22,8.84
+Laboratory Technician,1,200,56,2921.71,2682.0,239.71,8.2
+Healthcare Representative,4,9,1,13073.5,12169.0,904.5,6.92
+Healthcare Representative,3,44,5,9426.28,8877.8,548.48,5.82
+Research Scientist,1,234,45,2859.46,2694.07,165.39,5.78
+Research Scientist,2,57,2,4822.35,4724.5,97.85,2.03
+Research Director,5,26,2,19188.92,19395.5,-206.58,-1.08
+Sales Executive,3,79,17,9103.66,9202.76,-99.1,-1.09
+Manager,5,43,3,19159.58,19509.33,-349.76,-1.83
+Sales Executive,4,14,4,13125.2,13395.75,-270.55,-2.06
+Manufacturing Director,3,45,5,9262.4,9664.2,-401.8,-4.34
+Sales Executive,2,233,36,5760.22,6023.42,-263.2,-4.57
+Manager,3,12,2,12133.7,12729.5,-595.8,-4.91
+Human Resources,3,6,2,9326.5,10216.0,-889.5,-9.54
+Laboratory Technician,2,56,5,4394.0,5084.2,-690.2,-15.71
+Healthcare Representative,2,78,3,5828.28,6792.0,-963.72,-16.54
