@@ -6,6 +6,8 @@
 - **Primary Objective**: Enable executive leadership and talent managers to monitor baseline turnover, pinpoint high-risk employee segments, evaluate compensation equity vs flight risk, and enact proactive retention interventions before key talent departs.
 - **Data Source**: [`exports/tableau_attrition_master.csv`](file:///c:/Users/KHUSHI/Downloads/project%20emp/exports/tableau_attrition_master.csv) (1,470 records, 44 dimension & measure columns).
 
+![Tableau Dashboard Preview](assets/dashboard_preview.png)
+
 ---
 
 ## 2. Visual Architecture & Layout Grid

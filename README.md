@@ -1,111 +1,110 @@
 # 🏢 Employee Attrition & Workforce Intelligence Analytics
-### *Uncovering the Root Causes of Turnover & Designing Data-Driven Retention Strategies*
+### *Uncovering Root Causes of Turnover & Engineering Data-Driven Retention Strategies*
 
-![SQL](https://img.shields.io/badge/Database-SQLite%203-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Data%20Pipeline-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Tableau](https://img.shields.io/badge/BI%20Dashboard-Tableau%20Ready-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+<p align="center">
+  <img src="docs/assets/dashboard_preview.png" alt="Tableau Attrition & Workforce Analytics Dashboard Preview" width="100%" />
+</p>
+
+<p align="center">
+  <a href="#-executive-kpi-scorecard"><img src="https://img.shields.io/badge/Workforce-1%2C470%20Employees-blue?style=for-the-badge" alt="Workforce"></a>
+  <a href="#-executive-kpi-scorecard"><img src="https://img.shields.io/badge/Attrition%20Rate-16.12%25-critical?style=for-the-badge" alt="Attrition"></a>
+  <a href="#-executive-kpi-scorecard"><img src="https://img.shields.io/badge/Avg%20Salary%20Gap--%242%2C045%2Fmo-orange?style=for-the-badge" alt="Salary Gap"></a>
+  <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/Database-SQLite%203-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"></a>
+  <a href="https://pandas.pydata.org/"><img src="https://img.shields.io/badge/ETL-Python%20%7C%20Pandas-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://www.tableau.com/"><img src="https://img.shields.io/badge/BI-Tableau%20Ready-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau"></a>
+</p>
 
 ---
 
-## 📖 Executive Summary
+## 📌 Executive Summary
 
-Voluntary employee turnover is one of the costliest blind spots in corporate talent management. Beyond the immediate disruption to operations, replacing a skilled employee typically costs **50% to 200% of their annual salary** in recruitment, onboarding downtime, and lost institutional knowledge.
+Voluntary employee turnover imposes substantial direct and indirect costs on enterprises, ranging from replacement recruitment and onboarding overheads to lost institutional knowledge and team burnout.
 
 This project delivers an end-to-end **Workforce Intelligence & Attrition Analysis** built upon the **IBM HR Analytics dataset (1,470 records across 35 workforce dimensions)**. Combining relational SQLite database modeling, a modular 10-query SQL analytics suite, Python ETL automation, and executive Tableau BI specifications, this study isolates the exact drivers behind why employees leave and equips HR leaders with empirical, high-ROI retention interventions.
 
-```
-                    ┌─────────────────────────┐
-                    │  1,470 Total Employees  │
-                    └────────────┬────────────┘
-                                 │
-                 ┌───────────────┴───────────────┐
-                 ▼                               ▼
-     ┌───────────────────────┐       ┌───────────────────────┐
-     │ 1,233 Retained (83.9%)│       │  237 Leavers (16.1%)  │
-     │ Avg Salary: $6,833/mo │       │ Avg Salary: $4,787/mo │
-     │ Avg Tenure: 7.37 Yrs  │       │ Avg Tenure: 5.13 Yrs  │
-     └───────────────────────┘       └───────────────────────┘
-```
+> [!IMPORTANT]
+> **Key Finding**: Turnover is concentrated in early-career roles subjected to heavy overtime and below-market compensation. **First-year employees working overtime experience a staggering 71.43% turnover rate**, compared to just **20.00%** without overtime.
 
 ---
 
-## 🎯 Key Business Questions Addressed
+## 🎯 Executive KPI Scorecard
 
-1. **Macro Turnover**: What is the company-wide baseline voluntary attrition rate, and what is the financial compensation gap between leavers and retained peers?
-2. **Department & Role Hotspots**: Which teams experience critical flight risk, and where is the greatest absolute talent drain concentrated?
-3. **Pay Parity & Compression**: Are employees leaving due to systemic pay disparities across equivalent seniority levels?
-4. **The Overtime Burnout Spiral**: How severely does mandatory overtime accelerate turnover among new hires vs tenured staff?
-5. **Employee Sentiment & Work-Life Dynamics**: How strongly do low satisfaction scores (job, environment, work-life balance) correlate with departure rates?
-6. **Commute & Travel Friction**: What is the compounded impact of frequent business travel paired with long commutes?
-7. **Managerial Continuity**: Does leadership instability (e.g. new managers) trigger flight risk even after promotions?
-8. **High-Risk Segment Profiles**: Which multi-variable employee segments exhibit extreme (>70%) flight risk?
+| 👥 Total Headcount | 🚪 Voluntary Leavers | 📉 Attrition Rate | ⏳ Avg Leaver Tenure | 💵 Monthly Salary Gap |
+| :---: | :---: | :---: | :---: | :---: |
+| **1,470** | **237** | **16.12%** | **5.13 Years** | **-$2,045.65 / mo** |
+| *Active: 1,233 (83.9%)* | *Voluntary departures* | *Industry benchmark: 14%* | *Retained avg: 7.37 yrs* | *-30.0% leaver deficit* |
 
 ---
 
-## 🔍 Core Analytical Findings (100% Empirically Verified)
+## 📊 Deep-Dive Empirical Findings
 
 All findings below were computed directly through deterministic SQL queries against [`data/attrition.db`](data/attrition.db):
 
 ### 1. 💰 The $2,045 Monthly Compensation Gap
-Employees who voluntarily depart earn an average of **$4,787.09/month** compared to **$6,832.74/month** for employees who stay—representing an organizational **30.0% salary deficit (-$2,045.65/month)**.
-- Across junior roles (Job Level 1 & 2), leavers consistently sit in the lowest quartile of compensation within their grade.
-- In entry-level Sales roles, leavers were paid **50.65% less** than peers who remained.
+Employees who leave earn an average of **$4,787.09/month** compared to **$6,832.74/month** for employees who stay—representing an organizational **30.0% salary deficit (-$2,045.65/month)**.
 
 ```
 Retained Staff:  ████████████████████████ $6,833 / mo
 Leavers:         █████████████████        $4,787 / mo  (-$2,045 deficit)
 ```
 
+> [!NOTE]
+> In entry-level Sales Representative roles (Level 2), departing staff were paid **50.65% less** than peers who remained ($2,086/mo vs $4,227/mo).
+
 ---
 
-### 2. 🚨 Critical Flight-Risk Roles & Volume Hotspots
-- **Sales Representatives** suffer the highest percentage attrition across the company at **39.76%** (33 leavers out of 83 staff).
-- **Laboratory Technicians** represent the **largest absolute volume of departures**: 62 leavers (**26.16% of all exits company-wide**) with a 23.94% turnover rate.
-- **Human Resources Specialists** exhibit an elevated **23.08% attrition rate**.
+### 2. 🚨 Departmental & Job Role Turnover Hierarchy
 
-| Department | Job Role | Headcount | Leavers | Attrition % | % Total Company Exits |
+```
+Sales Representative:   ████████████████████ 39.76% (33 leavers)
+Laboratory Technician:  ████████████ 23.94% (62 leavers - 26.2% of all company exits!)
+Human Resources:        ████████████ 23.08% (12 leavers)
+Sales Executive:        █████████ 17.48% (57 leavers)
+Research Scientist:     ████████ 16.10% (47 leavers)
+```
+
+| Department | Job Role | Total Headcount | Leavers Count | Attrition % | Share of Total Exits |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Sales** | Sales Representative | 83 | 33 | **39.76%** | 13.92% |
-| **R&D** | Laboratory Technician | 259 | 62 | **23.94%** | **26.16%** |
-| **HR** | Human Resources | 52 | 12 | **23.08%** | 5.06% |
+| **Research & Development** | Laboratory Technician | 259 | 62 | **23.94%** | **26.16%** 🔴 |
+| **Human Resources** | Human Resources | 52 | 12 | **23.08%** | 5.06% |
 | **Sales** | Sales Executive | 326 | 57 | **17.48%** | 24.05% |
-| **R&D** | Research Scientist | 292 | 47 | **16.10%** | 19.83% |
+| **Research & Development** | Research Scientist | 292 | 47 | **16.10%** | 19.83% |
+| **Research & Development** | Manufacturing Director | 145 | 10 | **6.90%** | 4.22% |
+| **Management** | Manager | 102 | 5 | **4.90%** | 2.11% |
 
 ---
 
-### 3. ⏱️ Overtime: The Single Strongest Catalyst for Turnover
+### 3. ⏱️ Overtime Burnout: The Critical Multiplier
 Overtime dramatically multiplies flight risk, especially during the critical onboarding window (<2 years of tenure):
-- **Tenure < 1 Year + Overtime**: **71.43% Attrition Rate** (10 out of 14 leave).
-- **Tenure < 1 Year + No Overtime**: **20.00% Attrition Rate** (6 out of 30 leave).
-- **Tenure 1–2 Years + Overtime**: **47.78% Attrition Rate** (43 out of 90 leave).
-- **Tenure 1–2 Years + No Overtime**: **16.48% Attrition Rate** (29 out of 176 leave).
 
 ```
-< 1 Yr Tenure + Overtime:     ██████████████████████████████ 71.43%
-< 1 Yr Tenure + No Overtime:  ████████ 20.00%
-1-2 Yrs Tenure + Overtime:    ████████████████████ 47.78%
-1-2 Yrs Tenure + No Overtime: ███████ 16.48%
+< 1 Yr Tenure + Overtime:     ██████████████████████████████ 71.43%  (10 of 14 left)
+< 1 Yr Tenure + No Overtime:  ████████ 20.00%  (6 of 30 left)
+1-2 Yrs Tenure + Overtime:    ████████████████████ 47.78%  (43 of 90 left)
+1-2 Yrs Tenure + No Overtime: ███████ 16.48%  (29 of 176 left)
 ```
+
+> [!WARNING]
+> Early-career employees subjected to mandatory overtime are **3.5x more likely to leave** than their peers with sustainable workloads.
 
 ---
 
 ### 4. 🚗 Commute Distance & Travel Friction
-- Employees living **26+ miles from the office** who are required to **Travel Frequently** experience a **41.18% attrition rate**.
-- Conversely, employees living near the office (1-5 miles) who do not travel for business experience an attrition rate of only **3.17%**.
+- Employees living **26+ miles from the office** who **Travel Frequently** experience a **41.18% attrition rate** (14 of 34).
+- In contrast, employees living near the office (1-5 miles) who do not travel experience an attrition rate of only **3.17%** (2 of 63).
 
 ---
 
-### 5. 👥 Managerial Continuity & Promotion Risks
+### 5. 👥 Managerial Transitions as Vulnerability Windows
 - **31.10% of employees** who have been with their current manager for **less than 1 year** leave the company, even if they received a promotion that same year.
-- This demonstrates that **manager changes represent a high-vulnerability retention window** where newly assigned staff feel disconnected or unsupported.
+- This demonstrates that **managerial turnover disrupts psychological safety**, requiring proactive HR engagement during leadership changes.
 
 ---
 
-### 6. 🎯 The Top Multi-Factor Flight-Risk Segments
+### 6. 🎯 High-Risk Flight Segments Leaderboard
 
-| Rank | High-Risk Cohort Definition | Headcount | Leavers | Flight Risk Rate |
+| Rank | Multi-Factor Cohort Profile | Headcount | Leavers | Attrition % |
 | :---: | :--- | :---: | :---: | :---: |
 | 🥇 | **Sales Rep + Overtime + Low Income (<$3.5k) + Early Career (<=2 yrs)** | 10 | 8 | **80.00%** |
 | 🥈 | **Lab Tech + Overtime + Low Income (<$3.5k) + Early Career (<=2 yrs)** | 21 | 15 | **71.43%** |
@@ -113,32 +112,48 @@ Overtime dramatically multiplies flight risk, especially during the critical onb
 
 ---
 
-## 💡 Strategic Action Plan for HR Leadership
+## 💡 Strategic HR Retention Playbook
 
 ```
-┌───────────────────────────────────────────────────────────────────────────────┐
-│                           HR RETENTION PLAYBOOK                                │
-├───────────────────────────────────────────────────────────────────────────────┤
-│ 1. Mandatory Overtime Cap (<24 Mo Tenure)                                    │
-│    Enforce hard caps on weekly overtime for early-career hires to resolve     │
-│    the 71.4% first-year burnout spike.                                        │
-│                                                                               │
-│ 2. Parity Adjustments for Junior Technical Roles                             │
-│    Re-benchmark base compensation for Level 1/2 Laboratory Technicians and     │
-│    Sales Reps earning below $3,500/mo to close the 30.0% leaver salary deficit.│
-│                                                                               │
-│ 3. Structured 90-Day Manager Transition Program                               │
-│    Implement formalized skip-level check-ins during the first 90 days of any  │
-│    manager transition to address the 31.1% leadership-change turnover rate.   │
-│                                                                               │
-│ 4. Flexible Commute Subsidy & Remote Days for High Travelers                  │
-│    Offer hybrid flex days to employees commuting >25 miles who travel often.  │
-└───────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                              ACTIONABLE HR INTERVENTIONS                                 │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. 🛑 Mandatory Overtime Caps for New Hires (<24 Months Tenure)                         │
+│    Implement policy guardrails capping weekly overtime hours for new employees to        │
+│    extinguish the 71.4% first-year turnover surge.                                      │
+│                                                                                         │
+│ 2. 💵 Junior Technical Compensation Parity Adjustments                                  │
+│    Conduct equity reviews for Level 1/2 Laboratory Technicians and Sales Reps earning    │
+│    under $3,500/mo to close the 30.0% salary deficit against competitors.               │
+│                                                                                         │
+│ 3. 🤝 Formalized 90-Day Manager Transition Framework                                    │
+│    Introduce structured 30/60/90 day check-ins whenever an employee transitions to a    │
+│    new manager to address the 31.1% leadership-change attrition peak.                   │
+│                                                                                         │
+│ 4. 🚆 Commute Flexibility & Remote Options for Frequent Travelers                       │
+│    Grant hybrid work allowances for staff commuting >25 miles who travel frequently.     │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📂 Repository Architecture
+## 🏗️ Technical Architecture & Pipeline
+
+```mermaid
+graph TD
+    A[IBM HR Analytics Raw Dataset<br/>1,470 Records, 35 Columns] --> B[scripts/load_data.py<br/>Schema Normalization & Type Casting]
+    B --> C[(data/attrition.db<br/>SQLite Database + B-Tree Indexes)]
+    C --> D[sql/*.sql Analysis Suite<br/>10 Modular Business Queries]
+    D --> E[scripts/run_queries.py<br/>Automated Query Validation Suite]
+    D --> F[scripts/export_summaries.py<br/>Batch CSV Summary Exporter]
+    F --> G[exports/*.csv<br/>10 Analytical CSV Summaries]
+    F --> H[exports/tableau_attrition_master.csv<br/>44-Column Enriched BI Master Dataset]
+    H --> I[Tableau Desktop / Power BI<br/>Interactive Workforce Dashboard]
+```
+
+---
+
+## 📂 Repository File Index
 
 ```
 Employee-Attrition-Workforce-Analytics/
@@ -165,40 +180,27 @@ Employee-Attrition-Workforce-Analytics/
 │   ├── tableau_attrition_master.csv       # Flat enriched master dataset for BI tools (1,470 records)
 │   ├── summary_01_kpis.csv ... summary_10_salary_hike_performance.csv # Modular analytical summaries
 ├── docs/
+│   ├── assets/
+│   │   └── dashboard_preview.png          # High-resolution Tableau BI dashboard preview
 │   └── tableau_dashboard_spec.md          # Tableau visual architecture, KPI layout, & LOD formulas
-└── README.md                              # Project documentation & business intelligence report
+└── README.md                              # Portfolio documentation & business intelligence report
 ```
 
 ---
 
-## 📊 Tableau BI Dashboard Specification
+## 📊 Tableau BI Dashboard Specifications
 
-The repository includes a production-ready BI specification in [`docs/tableau_dashboard_spec.md`](docs/tableau_dashboard_spec.md) with pre-built Level of Detail (LOD) formulas:
+A complete engineering specification is provided in [`docs/tableau_dashboard_spec.md`](docs/tableau_dashboard_spec.md).
 
-```
-+---------------------------------------------------------------------------------------------------+
-|  HEADER: Strategic Workforce Analytics & Attrition Intelligence          [Last Refresh: Active DB]|
-+---------------------------------------------------------------------------------------------------+
-|  GLOBAL FILTER PANEL: [Department]  |  [Job Role]  |  [Overtime]  |  [Travel]  |  [Tenure Band]    |
-+---------------------------------------------------------------------------------------------------+
-|  KPI CARDS:                                                                                       |
-|  [ 1. Total Headcount ]  [ 2. Attrition Rate % ]  [ 3. Avg Leaver Tenure ]  [ 4. Monthly Comp Gap]|
-|    1,470 Employees          16.12% (+2.1% vs tgt)      5.13 Years (-2.24y)       -$2,045 (-30.0%) |
-+-------------------------------------------------+-------------------------------------------------+
-|  CHART 1: Attrition Rate by Dept & Job Role     |  CHART 2: Monthly Income vs Attrition by Level  |
-|  (Dual-Axis Horizontal Bar & Leaver Volume)     |  (Box Plot & Jittered Compensation Points)      |
-+-------------------------------------------------+-------------------------------------------------+
-|  CHART 3: Overtime & Tenure Risk Heatmap        |  CHART 4: Top Flight-Risk Employee Watchlist    |
-|  (Color Intensity Matrix of Attrition %)        |  (Ranked Risk Table / Actionable Watchlist)     |
-+-------------------------------------------------+-------------------------------------------------+
-```
-
-### Sample Native Tableau LOD Formulas Included in `docs/`:
+### Pre-built Native Tableau LOD Calculations:
 ```tableau
-// Organization Baseline Turnover Rate (Fixed Level of Detail)
+// 1. Organization Baseline Turnover Rate (Fixed LOD)
 { FIXED : SUM([attrition_flag]) / COUNT([employee_id]) }
 
-// Monthly Compensation Gap ($)
+// 2. Department-Specific Attrition Rate (Fixed LOD)
+{ FIXED [department] : SUM([attrition_flag]) / COUNT([employee_id]) }
+
+// 3. Role-Level Monthly Compensation Gap ($)
 { FIXED [job_role], [job_level] : 
     AVG(IIF([attrition]='No', [monthly_income], NULL)) - 
     AVG(IIF([attrition]='Yes', [monthly_income], NULL)) 
@@ -211,8 +213,8 @@ The repository includes a production-ready BI specification in [`docs/tableau_da
 
 ### 1. Prerequisites
 - Python 3.8+
-- SQLite3 (included with Python standard library)
-- Required library: `pandas`
+- SQLite3 (built into Python standard library)
+- Required dependency: `pandas`
 
 ```bash
 pip install pandas
@@ -220,35 +222,28 @@ pip install pandas
 
 ### 2. Step-by-Step Execution
 
-#### Step 1: Initialize Database & Ingest Cleaned Data
 ```bash
+# Step 1: Ingest raw data, apply schema DDL, and build SQLite database
 python scripts/load_data.py
-```
-*Output: Normalizes schema, drops zero-variance columns, creates indexes, and builds `data/attrition.db`.*
 
-#### Step 2: Run & Validate SQL Analytics Suite
-```bash
+# Step 2: Validate all 10 SQL analytical queries against the database
 python scripts/run_queries.py
-```
-*Output: Executes all 10 SQL query files in sequence and verifies output schema integrity.*
 
-#### Step 3: Generate Summary CSVs & Tableau Master Dataset
-```bash
+# Step 3: Run the export pipeline to generate summary CSVs and the Tableau extract
 python scripts/export_summaries.py
 ```
-*Output: Generates 10 modular summary CSVs and `exports/tableau_attrition_master.csv`.*
 
 ---
 
-## 🛠️ Technical Competencies Demonstrated
+## 🛠️ Data Analyst Skills Demonstrated
 
-- **Relational Data Modeling**: Typed DDL schemas, primary keys, `CHECK` constraints, composite analytical indexes.
-- **Advanced SQL**: Common Table Expressions (CTEs), multi-table unions, conditional aggregation (`CASE WHEN`), window calculations, null-safe arithmetic.
-- **Data Engineering**: Python ETL script design, automated schema transformation, robust error handling.
-- **Business Intelligence**: Executive KPI scorecards, visual hierarchy design, Level-of-Detail (LOD) formulas, actionable HR strategy synthesis.
+- **Relational Data Modeling**: Typed DDL schemas, primary keys, `CHECK` constraints, composite analytical B-Tree indexes.
+- **Advanced SQL Querying**: CTEs, multi-table unions, conditional aggregation (`CASE WHEN`), window partitioning, null-safe arithmetic.
+- **Data Engineering & ETL**: Python automation pipelines, data validation, automated CSV generation.
+- **Business Intelligence (BI)**: Executive KPI scorecards, visual hierarchy, Level-of-Detail (LOD) formulas, data-driven HR strategy synthesis.
 
 ---
 
 ## 📄 License & Attribution
-- Dataset: IBM HR Analytics Employee Attrition & Performance Dataset.
-- Code & Documentation: Distributed under the [MIT License](LICENSE).
+- Dataset: [IBM HR Analytics Employee Attrition & Performance Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset).
+- Repository distributed under the [MIT License](LICENSE).
